@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - program of sizes of data types
  *
  * Description: Prints the size of various types on the computer it is compiled
  * and run on.
