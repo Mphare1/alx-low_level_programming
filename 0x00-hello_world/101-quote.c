@@ -1,19 +1,19 @@
 #include <unistd.h>
 
 /**
- * main - Entry point
+ * main - the chars/ arrays
  *
  * Return: Always 1 (Error)
  */
 int main(void)
 {
-	char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int len = 0;
+	char *the_chars = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int length = 0;
 
-	while (str[len] != '\0')
-		len++;
+	while (the_chars[length] != '\0')
+		length++;
 
-	write(2, str, len);
+	write(2, the_chars, length);
 
 	return (1);
 }
