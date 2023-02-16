@@ -4,7 +4,7 @@
  * main - Entry point of the program
  *
  * Description: Prints the size of various types on the computer it is compiled
- *              and run on.
+ * and run on.
  *
  * Return: Always 0 (Success)
  */
