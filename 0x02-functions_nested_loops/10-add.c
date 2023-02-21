@@ -3,7 +3,7 @@
 
 /**
  * add - Adds two values
- * 
+ *add x and y 
  * Return: Integer value
  */
 
