@@ -2,7 +2,7 @@
 
 
 /**
- * more_numbers - Print 10 times the numbers 0  to 14
+ * more_numbers - Print 10 times the numbers since 0 up to 14
  * Return: 10 times of the numbers since 0 up to 14
  */
 
@@ -24,9 +24,4 @@ void more_numbers(void)
 	}
 	_putchar('\n');
 	}
-}
-int main(void)
-{
-	    more_numbers();
-	        return (0);
 }
