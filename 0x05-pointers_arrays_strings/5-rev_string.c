@@ -17,11 +17,12 @@ j++;
 j--;
 
 /* Swap characters from start to end of the string */
-while (i < j) {
+while (i < j)
+{
 tmp = s[i];
 s[i] = s[j];
 s[j] = tmp;
 i++;
 j--;
-    }
+}
 }
