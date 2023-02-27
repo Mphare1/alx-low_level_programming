@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
+
 /**
  * puts_half - Prints half of a string, followed by a new line.
  * @str: Pointer to the string.
@@ -9,27 +8,27 @@
  */
 void puts_half(char *str)
 {
-        int len = 0, i;
+	int length, n, i;
 
-        while (str[len] != '\0')
-        {
-                len++;
-        }
+	length = 0;
 
-        if (len % 2 == 0)
-        {
-                i = len / 2;
-        }
-        else
-        {
-                i = (len - 1) / 2;
-        }
+	while (str[length] != '\0')
+	{
+		length++;
+	}
 
-        while (i < len)
-        {
-                _putchar(str[i]);
-                i++;
-        }
-
-        _putchar('\n');
+	if (length % 2 == 0)
+	{
+		for (i = length / 2; str[i] != '\0'; i++)
+		{
+			_putchar(str[i]);
+		}
+	} else if (length % 2)
+	{
+		for (n = (length - 1) / 2; n < length - 1; n++)
+		{
+			_putchar(str[n + 1]);
+		}
+	}
+	_putchar('\n');
 }
