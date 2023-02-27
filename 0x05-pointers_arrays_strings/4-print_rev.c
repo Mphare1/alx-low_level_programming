@@ -8,13 +8,13 @@
  */
 void print_rev(char *s)
 {
-        int len = 0;
+int len = 0;
 
-        while (s[len])
-                len++;
+while (s[len])
+len++;
 
-        while (len--)
-                write(STDOUT_FILENO, &s[len], 1);
+while (len--)
+write(STDOUT_FILENO, &s[len], 1);
 
-        write(STDOUT_FILENO, "\n", 1);
+write(STDOUT_FILENO, "\n", 1);
 }
