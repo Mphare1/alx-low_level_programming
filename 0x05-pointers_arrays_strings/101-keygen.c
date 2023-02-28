@@ -10,34 +10,31 @@
 int main(void)
 {
     int i, sum, n;
-    char c = '0';
+    char password[100] = {0};
 
     srand(time(0));
     sum = 0;
     i = 0;
 
-    while (sum < 2772 - 122)
+    while (sum < 2772 - 122 && i < 98)
     {
         n = rand() % 62;
         if (n < 10)
-            c = '0' + n;
+            password[i] = '0' + n;
         else if (n < 36)
-            c = 'A' + n - 10;
+            password[i] = 'A' + n - 10;
         else
-            c = 'a' + n - 36;
+            password[i] = 'a' + n - 36;
 
-        sum += (int)c;
-        putchar(c);
+        sum += (int)password[i];
         i++;
     }
 
-    c = (2772 - sum);
-    if (c < 10)
-        putchar(c + '0');
-    else if (i < 98)
-        putchar(c - 10 + 'A');
-    else
-        putchar(c - 10 + 'a');
+    password[i] = (2772 - sum < 10) ? (2772 - sum + '0') :
+                                      (i < 98) ? (2772 - sum - 10 + 'A') :
+                                                 (2772 - sum - 10 + 'a');
+
+    printf("%s\n", password);
 
     return (0);
 }
