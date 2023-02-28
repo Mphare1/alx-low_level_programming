@@ -10,7 +10,7 @@
 int main(void)
 {
     int i, sum, n;
-    char c;
+    char c = '0';
 
     srand(time(0));
     sum = 0;
@@ -26,7 +26,7 @@ int main(void)
         else
             c = 'a' + n - 36;
 
-        sum += c;
+        sum += (int)c;
         putchar(c);
         i++;
     }
