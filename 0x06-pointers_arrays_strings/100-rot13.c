@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * rot13 - Encodes a string using rot13 encryption
  * @s: The string to be encoded
