@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strchr - locate character in string
  * @s: pointer to string
