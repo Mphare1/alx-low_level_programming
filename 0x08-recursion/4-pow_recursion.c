@@ -1,9 +1,9 @@
 /**
  * _pow_recursion - returns the value of x raised to the power of y
- * @x: the base integer
- * @y: the exponent integer
+ * @x: the base
+ * @y: the exponent
  *
- * Return: the result of x raised to y, or -1 if y is negative
+ * Return: x^y if success, -1 if y is negative
  */
 int _pow_recursion(int x, int y)
 {
