@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
+
 /**
  * _strdup - duplicate to new memory space location
  * @str: char
- * Return: 0 succes
+ * Return: pointer to duplicated string, or NULL if it fails
  */
 char *_strdup(char *str)
 {
@@ -14,17 +16,16 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (y = 0; y <= *str; y++)
-	{
-	}
+	y = strlen(str);
+	array = malloc(sizeof(char) * (y + 1));
 
-	y += 1;
-	array = malloc(sizeof(char) * y);
+	if (array == NULL)
+		return (NULL);
 
 	for (x = 0; x < y; x++)
 		array[x] = str[x];
 
-	if (array == NULL)
-		return (NULL);
+	array[x] = '\0';
+
 	return (array);
 }
