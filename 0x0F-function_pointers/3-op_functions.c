@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
-  * op_add - 
+  * op_add - ...
   * @a: ...
   * @b: ...
   *
-  * Return: returns the sum of a and b
+  * Return: ...
   */
 int op_add(int a, int b)
 {
@@ -15,11 +15,11 @@ int op_add(int a, int b)
 }
 
 /**
-  * op_sub -  
+  * op_sub - ...
   * @a: ...
   * @b: ...
   *
-  * Return: returns the difference of a and b.
+  * Return: ...
   */
 int op_sub(int a, int b)
 {
@@ -31,7 +31,7 @@ int op_sub(int a, int b)
   * @a: ...
   * @b: ...
   *
-  * Return: returns the product of a and b
+  * Return: ...
   */
 int op_mul(int a, int b)
 {
