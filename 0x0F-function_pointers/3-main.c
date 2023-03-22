@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry point for the calculator program
- * @argc: The number of arguments passed to the program
- * @argv: An array of strings containing the arguments passed to the program
- *
- * Return: 0 on success, exit codes on failure
+  * main - ...
+  * @argc: ...
+  * @argv: ...
+  *
+  * Return: ...
   */
 int main(int argc, char *argv[])
 {
