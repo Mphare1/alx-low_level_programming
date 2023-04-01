@@ -4,15 +4,14 @@
 
 list_t *new_node(const char *str);
 /**
- * add_node_end - added a new node to the end of a list.
- * @head: pointer to pointer of a list_t
- * @str: string to copy into a node.
- *
- * Return: pointer to a list_t
+ * add_node_end - add node to end of linked list
+ * @head: linked list
+ * @str: data for new node
+ * Return: address of new element, or NULL if failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *lst;
 
 	if (!(*head))
 	{
@@ -22,9 +21,9 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!(*head)->next)
 	{
-		new = new_node(str);
-		new->next = (*head)->next;
-		(*head)->next = new;
+		lst = new_node(str);
+		lst->next = (*head)->next;
+		(*head)->next = lst;
 	}
 	else
 		add_node_end(&(*head)->next, str);
@@ -33,25 +32,25 @@ list_t *add_node_end(list_t **head, const char *str)
 }
 
 /**
- * new_node - create a new node around a string src.
+ * new_node - ....
  * @str: string to add to the node.
  *
- * Return: pointer to a list_t
+ * Return: ....
  */
 list_t *new_node(const char *str)
 {
-	list_t *new;
-	size_t len;
+	list_t *lst;
+	size_t x;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
+	lst = malloc(sizeof(list_t));
+	if (!lst)
 		return (NULL);
-	len = 0;
-	while (str[len])
-		len++;
+	x = 0;
+	while (str[x])
+		x++;
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = NULL;
-	return (new);
+	lst->str = strdup(str);
+	lst->x = x;
+	lst->next = NULL;
+	return (lst);
 }
