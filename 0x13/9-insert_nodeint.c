@@ -1,3 +1,4 @@
+#include "lists.h"
 /*
  * Function:  insert_nodeint_at_index
  * --------------------
