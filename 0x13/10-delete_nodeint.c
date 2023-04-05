@@ -1,3 +1,4 @@
+#include "lists.h"
 /*
  * Function:  delete_nodeint_at_index
  * --------------------
