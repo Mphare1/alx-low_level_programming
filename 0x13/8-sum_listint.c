@@ -5,7 +5,7 @@
  * @head: pointer to the head node of the list
  * Return: the sum of all data, or 0 if the list is empty
  */
-int get_sum_listint(listint_t *head)
+int sum_listint(listint_t *head)
 {
     int sum = 0;
 
