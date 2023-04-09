@@ -12,16 +12,18 @@ static ssize_t read_file(char *file, char **buf, int fd);
 static void write_copy(char *file, int fd, char *buf, int len);
 
 /**
- * main - This program copies the content of one file into another
- * @argc: argument count.
- * @argv: argument values.
+ * main - This main
+ * @argc: count.
+ * @argv: values.
  *
- * Return: 0 (SUCCESS)
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int fd_in, fd_out, rd_len, close_err;
-	char *buf, *file_from, *file_to;
+	int fd_in, fd_out;
+	int rd_len, close_err;
+	char *buf, *file_from;
+	char *file_to;
 
 	buf = NULL;
 	rd_len = 1;
@@ -36,11 +38,10 @@ int main(int argc, char *argv[])
 	fd_out = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while (rd_len > 0)
 	{
-		/* Read the content from origin file */
 		rd_len = read_file(file_from, &buf, fd_in);
 		if (!rd_len)
 			break;
-		/* Write out the buffer to destination */
+		
 		write_copy(file_to, fd_out, buf, rd_len);
 	}
 
@@ -61,12 +62,12 @@ int main(int argc, char *argv[])
 }
 
 /**
- * read_file - Reads from a file
+ * read_file - Reads a file
  * @file: the file to read
- * @buf: buffer for the text
- * @fd: file descriptor
+ * @buf: buffer
+ * @fd: file...
  *
- * Return: Number of bytes read
+ * Return: bytes
  */
 static ssize_t read_file(char *file, char **buf, int fd)
 {
@@ -89,11 +90,11 @@ static ssize_t read_file(char *file, char **buf, int fd)
 }
 
 /**
- * write_copy - Writes to a file
- * @file: the file to write
- * @fd: file descriptor
- * @buf: buffer for the text
- * @len: length of the buffer
+ * write_copy - Writes to file
+ * @file: file to write to
+ * @fd: file descript
+ * @buf: buffer
+ * @len: length
  *
  */
 static void write_copy(char *file, int fd, char *buf, int len)
