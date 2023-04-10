@@ -9,19 +9,19 @@
 
 * Return: converted number or 0
 */
-  unsigned int binary_to_uint(const char *binary)
+  unsigned int binary_to_uint(const char *b)
     {
     unsigned int num1 = 0;
 
-    if (!binary || !*binary)
+    if (!b || !*b)
     return (0);
 
-    for (int i = 0; binary[i]; i++)
+    for (int i = 0; b[i]; i++)
     {
-    if (binary[i] > '1' || binary[i] < '0')
+    if (b[i] > '1' || b[i] < '0')
     return (0);
      num1 <<= 1;
- if (binary[i] == '1')
+ if (b[i] == '1')
  	num1 = num1 + 1;
 
 }
