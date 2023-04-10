@@ -4,7 +4,7 @@
 /**
  * print_binary - function descript
  * @n: convert to binary
- *
+ *......
  */
 void print_binary(unsigned long int n)
 {
