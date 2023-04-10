@@ -25,7 +25,7 @@ while (b[x])
 	{
 		
 	c_num <<= 1;
-	c_num =c_num + 1;
+	c_num = c_num + 1;
 		
 	}
 	
