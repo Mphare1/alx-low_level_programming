@@ -33,5 +33,5 @@ while (b[x])
 	c_num <<= 1;
 	x++;
 	}
-return (num);
+return (c_num);
 }
