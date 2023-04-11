@@ -39,7 +39,7 @@ return (0);
   }
   buff[letters] = '\0';
   erro = write(STDOUT_FILENO, buff, read_c);
-  if (error <= 0)
+  if (erro <= 0)
   {
   free(buff);
   
