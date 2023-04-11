@@ -7,11 +7,19 @@
 
 static ssize_t read_file(char *file, char **buf, int fd);
 static void write_copy(char *file, int fd, char *buf, int len);
-
+/**
+ * main - ***********
+ * @argc: **************
+ * @argv: *************
+ *
+ * Return: 0*********
+ */
 int main(int argc, char *argv[])
 {
     int fd_from, fd_to;
+    
     ssize_t rd_len = 1, close_err;
+    
     char *buf = NULL, *file_from;
     char *file_to;
     if (argc != 3)
@@ -69,7 +77,13 @@ int main(int argc, char *argv[])
     }
     return (0);
 }
-
+/**
+ * read_file - ************
+ * @file: t***************
+ * @buf: buffer************
+ * @fd: ****************
+ * Return: *****************
+ */
 static ssize_t read_file(char *file, char **buf, int fd)
 {
     ssize_t rd_len;
@@ -93,6 +107,14 @@ static ssize_t read_file(char *file, char **buf, int fd)
     return (rd_len);
 }
 
+/**
+ * write_copy - *********************
+ * @file: f***************
+ * @fd: ******************
+ * @buf: *****************
+ * @len: ***************
+ *
+ */
 static void write_copy(char *file, int fd, char *buf, int len)
 {
     ssize_t wr_len;
