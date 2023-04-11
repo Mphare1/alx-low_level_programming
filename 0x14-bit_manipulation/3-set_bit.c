@@ -3,24 +3,24 @@
 #include <stdio.h>
 
 /**
- * set_bit - set the value of a bit to 1.
- * @n: ..............
- * @index: ......
- *
- * Return: 1 or -1
+ * set_bit --------------------
+ * @n: -------------------
+ * @index: ----------------------------
+ * Return: ---------------------------
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int mask = 1;
+unsigned long int tms = 1;
 
-if (index > 64)
-return (-1);
+	if (index > 64)
+	return (-1);
 
-	mask <<= index; /*** Shift 1 to the left by index positions ***/
-if (!(*n & mask))
+tms <<= index;
+if (!(*n & tms))
 {
-	*n |= mask; /*** Set the bit at the given index to 1 ***/
+	*n |= tms;
+	
 	return (1);
 }
-return (-1);
+	return (-1);
 }
