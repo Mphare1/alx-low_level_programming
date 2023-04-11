@@ -1,32 +1,25 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the bit to 0.
- * @n: pointer......
- * @index: index.....
- *
- *
- *
- * Return: 1 .... or -1......
+ * clear_bit -----------------
+ * @n: ----------------
+ * @index: -----------------
+ * Return: ************************
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int mask = 1;
+unsigned long int tms = 1;
 
-	if (index > 63)
-		return (-1);
+if (index > 63)
+	return (-1);
 
-	mask <<= index; /*** Shift 1 to the left by index positions ***/
-  
-	if (*n & mask)
+tms <<= index;
+if (*n & mask)
 {
-mask = ~mask;
-    
-*n &= mask; /*** Perform bitwise AND **/
-    
+tms = ~tms;    
+*n &= tms;    
 return (1);
     
-}
-  
+}  
 return (-1);
 }
