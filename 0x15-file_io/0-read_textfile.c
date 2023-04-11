@@ -15,7 +15,7 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int file_des = 0 erro = 0, read_c = 0;
+int file_des = 0, erro = 0, read_c = 0;
 char *buff;
 
 if (!filename || !letters)
