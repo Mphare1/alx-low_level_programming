@@ -2,36 +2,36 @@
 #include <stdio.h>
 
 /**
- * binary_to_uint - function that does conversion
- * @b: ...
- *
- * Return: number or 0
+ * binary_to_uint - -----------==========
+ * @b: ======----
+ * =========
+ * Return: ==============
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int c_num = 0;
-unsigned int x = 0;
+unsigned int c_1 = 0;
+unsigned int g = 0;
 
 if (!b || !*b)
 return (0);
 	
-while (b[x])
+while (b[g])
 {
-	if (b[x] > 49)
-	return (0);
+if (b[g]>49)
+return (0);
 	
-	else
-	if (b[x] == 49)
-	{
-		
-	c_num <<= 1;
-	c_num = c_num + 1;
-		
-	}
+else
+if (b[g]==49)
+{		
+c_1 <<= 1;
+c_1 += 1;		
+}
 	
-	else
-	c_num <<= 1;
-	x++;
-	}
-return (c_num);
+else
+c_1 <<= 1;
+g++;
+}
+
+return (c_1);
+
 }
