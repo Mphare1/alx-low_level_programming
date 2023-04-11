@@ -3,36 +3,37 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-
 #include <stdio.h>
 
 /**
- * append_text_to_file - append text to the end of a the file
- * @filename: name of file
- * @text_content: text to append to file
+ * append_text_to_file - *******************
+ * @filename: name of file*********
+ * @text_content: text********
  *
- * Return: 1 if success, else -1
+ * Return: *****************
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-    int file_descriptor = 0, err_code = 0, len = 0;
+    int file_des = 0;
+    int   err_c = 0;
+    int   x = 0;
 
 
     if (!filename)
         return (-1);
     else if (!text_content || !text_content[0])
         return (1);
-    file_descriptor = open(filename, O_WRONLY | O_APPEND);
-    if (file_descriptor < 0)
+    fil_des = open(filename, O_WRONLY | O_APPEND);
+    if (fil_des < 0)
         return (-1);
 
-    for (len = 0; text_content[len]; len++)
+    for (;; text_content[x]; x++)
         continue;
     
-    err_code = write(file_descriptor, text_content, len);
-    if (err_code < 0)
+    err_c = write(fil_des, text_content, x);
+    if (err_c < 0)
         return (-1);
     
-    close(file_descriptor);
+    close(fil_des);
     return (1);
 }
