@@ -31,7 +31,7 @@ return (0);
 {
   return (0);
 }
-  read_c = read(file_des, buffer, letters);
+  read_c = read(file_des, buff, letters);
   if (read_c < 0)
   {
   free(buff);
