@@ -1,18 +1,23 @@
 #include "main.h"
 
 /**
- * get_endianness - function........
+ * get_endianness - =------------------
  *
- * Return: .........
+ * Return: -----======
  */
 int get_endianness(void)
 {
-int num = 1;
-char *c = (char *)&num;
+	
+int r= 1;
+	
+char *g = (char *)&r;
 
-if (*c)
-		return (1);
+if (*g)
+return (1);
   
 else
+{
 	return (0);
+}
+	
 }
