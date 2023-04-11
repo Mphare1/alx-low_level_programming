@@ -20,40 +20,40 @@ static void write_copy(char *file, int fd, char *buf, int len);
  */
 int main(int argc, char *argv[])
 {
-	int fd_in, fd_out;
-	int rd_len, close_err;
-	char *buf, *file_from;
-	char *file_to;
+	int fd1_in1, fd1_out1;
+	int rd1_len1, close1_err1;
+	char *buf1, *file1_from1;
+	char *file1_to1;
 
-	buf = NULL;
-	rd_len = 1;
+	buf1 = NULL;
+	rd1_len1 = 1;
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	file_from = argv[1];
-	file_to = argv[2];
-	fd_in = open(file_from, O_RDONLY);
-	fd_out = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	file1_from1 = argv[1];
+	file1_to1 = argv[2];
+	fd1_in1 = open(file1_from1, O_RDONLY);
+	fd1_out1 = open(file1_to1, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while (rd_len > 0)
 	{
-		rd_len = read_file(file_from, &buf, fd_in);
-		if (!rd_len)
+		rd1_len1 = read_file(file1_from1, &buf1, fd1_in1);
+		if (!rd1_len1)
 			break;
 		
-		write_copy(file_to, fd_out, buf, rd_len);
+		write_copy(file1_to1, fd1_out1, buf1, rd1_len1);
 	}
 
-	free(buf);
-	close_err = close(fd_in);
+	free(buf1);
+	close_err = close(fd1_in1);
 	if (close_err < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %d\n", fd_in);
 		exit(100);
 	}
-	close_err = close(fd_out);
-	if (close_err < 0)
+	close1_err1 = close(fd_out);
+	if (close1_err1 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %d\n", fd_out);
 		exit(100);
