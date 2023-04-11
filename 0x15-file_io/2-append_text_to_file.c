@@ -27,7 +27,7 @@ int append_text_to_file(const char *filename, char *text_content)
     if (fil_des < 0)
         return (-1);
 
-    for (;; text_content[x]; x++)
+    for (; text_content[x]; x++)
         continue;
     
     err_c = write(fil_des, text_content, x);
