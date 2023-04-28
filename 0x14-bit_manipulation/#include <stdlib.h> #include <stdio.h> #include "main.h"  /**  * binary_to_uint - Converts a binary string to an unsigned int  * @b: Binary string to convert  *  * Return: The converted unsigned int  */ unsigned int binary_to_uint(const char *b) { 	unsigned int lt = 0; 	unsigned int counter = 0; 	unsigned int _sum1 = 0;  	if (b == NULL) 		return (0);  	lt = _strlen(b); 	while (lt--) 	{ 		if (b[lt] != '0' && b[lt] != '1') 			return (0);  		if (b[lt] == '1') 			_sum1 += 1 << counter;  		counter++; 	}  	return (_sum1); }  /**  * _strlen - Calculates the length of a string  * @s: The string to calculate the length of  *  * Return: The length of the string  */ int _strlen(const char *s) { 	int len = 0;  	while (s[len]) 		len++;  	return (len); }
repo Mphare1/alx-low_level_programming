@@ -1,6 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * binary_to_uint - Converts a binary string to an unsigned int
@@ -10,40 +9,29 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int lt = 0;
-	unsigned int counter = 0;
-	unsigned int _sum1 = 0;
+	unsigned int num2, i;
 
-	if (b == NULL)
+	if (!b || !*b)
 		return (0);
-
-	lt = _strlen(b);
-	while (lt--)
-	{
-		if (b[lt] != '0' && b[lt] != '1')
-			return (0);
-
-		if (b[lt] == '1')
-			_sum1 += 1 << counter;
-
-		counter++;
-	}
-
-	return (_sum1);
-}
-
 /**
- * _strlen - Calculates the length of a string
- * @s: The string to calculate the length of
+ * 
  *
- * Return: The length of the string
+ *
+ * 
  */
-int _strlen(const char *s)
-{
-	int len = 0;
-
-	while (s[len])
-		len++;
-
-return (len);
+	num2 = i = 0;
+	while (b[i])
+	{
+		if (b[i] > 49)
+			return (0);
+		else if (b[i] == 49)
+		{
+			num2 <<= 1;
+			num2 += 1;
+		}
+		else
+			num2 <<= 1;
+		i++;
+	}
+	return (num2);
 }
