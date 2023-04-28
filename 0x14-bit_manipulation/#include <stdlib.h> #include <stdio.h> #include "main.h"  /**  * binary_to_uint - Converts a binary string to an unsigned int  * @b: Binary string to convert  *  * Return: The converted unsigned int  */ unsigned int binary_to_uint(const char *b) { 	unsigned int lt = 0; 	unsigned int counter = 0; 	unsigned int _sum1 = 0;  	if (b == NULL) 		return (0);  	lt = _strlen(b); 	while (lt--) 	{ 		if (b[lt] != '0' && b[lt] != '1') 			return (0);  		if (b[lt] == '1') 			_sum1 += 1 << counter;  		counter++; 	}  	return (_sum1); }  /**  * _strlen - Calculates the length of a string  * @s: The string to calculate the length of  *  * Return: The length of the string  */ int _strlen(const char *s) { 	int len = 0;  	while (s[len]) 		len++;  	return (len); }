@@ -1,0 +1,49 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * binary_to_uint - Converts a binary string to an unsigned int
+ * @b: Binary string to convert
+ *
+ * Return: The converted unsigned int
+ */
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int lt = 0;
+	unsigned int counter = 0;
+	unsigned int _sum1 = 0;
+
+	if (b == NULL)
+		return (0);
+
+	lt = _strlen(b);
+	while (lt--)
+	{
+		if (b[lt] != '0' && b[lt] != '1')
+			return (0);
+
+		if (b[lt] == '1')
+			_sum1 += 1 << counter;
+
+		counter++;
+	}
+
+	return (_sum1);
+}
+
+/**
+ * _strlen - Calculates the length of a string
+ * @s: The string to calculate the length of
+ *
+ * Return: The length of the string
+ */
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while (s[len])
+		len++;
+
+	return (len);
+}
