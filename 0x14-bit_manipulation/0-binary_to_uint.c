@@ -14,12 +14,6 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b || !*b)
 		return (0);
-/**
- * 
- *
- *
- * 
- */
 	num2 = i = 0;
 	while (b[i])
 	{
