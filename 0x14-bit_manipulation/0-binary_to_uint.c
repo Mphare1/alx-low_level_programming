@@ -3,45 +3,47 @@
 #include "main.h"
 
 /**
-  * binary_to_uint - Converts a binary number to an unsigned int
-  * @b: The binary string to converts
-  *
-  * Return: The positive number converted from a binary
+  * binary_to_uint .....................
+  * @b: ................................
+  *...........................
+  * Return:....................
   */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len = 0, count = 0, sum = 0;
+unsigned int lt = 0;
+unsigned int  counter = 0
+unsigned int  _sum1 = 0;
 
 	if (b == NULL)
 		return (0);
 
-	len = _strlen(b);
-	while (len--)
+	lt = _strlen(b);
+	while (lt--)
 	{
-		if (b[len] != 48 && b[len] != 49)
+		if (b[lt] != 48 && b[lt] != 49)
 			return (0);
 
-		if (b[len] == 49)
-			sum += 1 << count;
+		if (b[lt] == 49)
+			_sum1 += 1 << counter;
 
-		count++;
+		counter++;
 	}
 
-	return (sum);
+	return (_sum1);
 }
 
 /**
-  * _strlen - Returns the length of a string
-  * @s: String to count
+  * _strlen - .......................
+  * @s: .............................
   *
-  * Return: String length
+  * Return: ........................
   */
 int _strlen(const char *s)
 {
-	int c = 0;
+	int a = 0;
 
-	while (s[c])
-		c++;
+	while (s[a])
+		a++;
 
-	return (c);
+	return (a);
 }
