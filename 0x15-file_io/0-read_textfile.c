@@ -6,51 +6,42 @@
 #include <fcntl.h>
 
 /**
-* read_textfile - read a text file and print it
-* 
-* @filename: .......
-* @letters: ... char to print.
-
-* Return: .... chars printed.
-*/
+ * read_textfile - fuction that read a text file and print it out the POSIX std
+ * out
+ * @filename: body of text to print.
+ * @letters: max char to print.
+ * Return: number of chars printed.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int file_des = 0, erro = 0, read_c = 0;
-char *buff = malloc(sizeof(char)*letters+1);
-/****/
-if (!filename || !letters)
-{
-return (0);
-}
-  file_des = open(filename, O_RDONLY);
-  if (file_des < 0)
-{
-  return (0);
-}
-  if (!buff)
-{
-  return (0);
-}
-  read_c = read(file_des, buff, letters);
-  if (read_c < 0)
-  {
-  free(buff);
-  return (0);
-  }
-  buff[letters] = '\0';
-  erro = write(STDOUT_FILENO, buff, read_c);
-  if (erro <= 0)
-  {
-  free(buff);
-  
-return (0);
-}
+	int fd, err, rd;
+	char *buf;
 
-free(buff);
-  
-close(file_des);
-  
-return (read_c);
-  
- 
+	fd = err = rd = 0;
+	if (!filename || !letters)
+		return (0);
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
+		return (0);
+
+	buf = malloc(sizeof(char) * letters + 1);
+	if (!buf)
+		return (0);
+	rd = read(fd, buf, letters);
+	if (rd < 0)
+	{
+		free(buf);
+		return (0);
+	}
+	buf[letters] = '\0';
+	err = write(STDOUT_FILENO, buf, rd);
+	if (err <= 0)
+	{
+		free(buf);
+		return (0);
+	}
+
+	free(buf);
+	close(fd);
+	return (rd);
 }
