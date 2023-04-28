@@ -6,11 +6,11 @@
 #include <fcntl.h>
 
 /**
- * read_textfile - fuction that read a text file and print it out the POSIX std
- * out
- * @filename: body of text to print.
- * @letters: max char to print.
- * Return: number of chars printed.
+ * read_textfile - ..................
+ * out.....................
+ * ....................
+ * ....................
+ * ...............
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
