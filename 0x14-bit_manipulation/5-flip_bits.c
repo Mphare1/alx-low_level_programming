@@ -11,17 +11,14 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    unsigned int digs = 0;
+unsigned int bts = 0;
+unsigned long int to_xor = n ^ m;
     
-    unsigned long int x_or;
-    
-    x_or = n ^ m;
-    
-    while(x_or)
+    while(to_xor)
     {
-        digs += x_or & 1;
-        x_or >>= 1;
+        bts += to_xor & 1;
+        to_xor >>= 1;
     }
     
-    return (digs);
+    return (bts);
 }
