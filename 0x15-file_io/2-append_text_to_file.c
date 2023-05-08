@@ -15,7 +15,7 @@ int append_text_to_file(const char *filename, char *text_content)
         return (1);
         
     open_f = open(filename, O_APPEND | O_WRONLY);
-    if(fd == -1)  /*If it fails*/
+    if(open_f == -1)  /*If it fails*/
         return (-1);
         
     for(; text_content[counter] != '\0'; counter++)
