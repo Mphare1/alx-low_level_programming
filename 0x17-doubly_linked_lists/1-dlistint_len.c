@@ -1,15 +1,16 @@
 #include "lists.h"
 
 /**
- * dlistint_len - function that finds the length of the linked list
- * @h: pointer
- * Return: ...
+ * dlistint_len - ...
+ * @h: ....
+ * Return: .....
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t c;
+	size_t x;
 
-	for (c = 0; h != NULL; c++)
+	for (x = 0; h != NULL; x++)
 		h = h->next;
-return (c);
+
+	return (x);
 }
