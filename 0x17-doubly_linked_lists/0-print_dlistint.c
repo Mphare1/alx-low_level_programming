@@ -1,19 +1,20 @@
 #include "lists.h"
 
 /**
- * print_dlistint - function that will print the list
- * @h: pointer
- * Return: counter
+ * print_dlistint - ...
+ * @h: ...
+ * Return: ...
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t c;
+	size_t x;
 
-	for (c = 0; h != NULL; c++)
+	for (c = 0; h != NULL; x++)
 	{
 		printf("%d\n", h->n);
+		
 		h = h->next;
 	}
   
-	return (c);
+	return (x);
 }
