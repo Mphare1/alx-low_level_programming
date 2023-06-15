@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - add node
- * @head: ptr to the head
- * @n:...
- * Return: ...
+ * add_dnodeint - ...
+ * @head: ....
+ * @n:....
+ * Return:....
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -21,6 +21,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	new->n = n;
   
 	new->next = *head;
+	
 	new->prev = NULL;
 
 	if (*head != NULL)
@@ -28,5 +29,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
   
 	*head = new;
   
+	
 	return (new);
 }
