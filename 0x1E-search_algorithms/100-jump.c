@@ -25,7 +25,7 @@ size_t minimum_value(size_t a, size_t b)
  */
 int jump_search(int *array, size_t size, int value)
 {
-    size_t lf, r, jump;
+    size_t lf, rf, jump;
     int val;
 
     if (array != NULL && size > 0)
