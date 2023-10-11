@@ -10,7 +10,7 @@
  */
 int interpolation_search(int *array, size_t size, int value)
 {
-    size_t low1 = 0, high1 = size - 1, pos1 = 0; // Changed variable name here
+    size_t low1 = 0, high1 = size - 1, pos1 = 0;
     double tmp2;
 
     if (!array)
